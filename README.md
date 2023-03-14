@@ -1,1 +1,1 @@
-# Vue3TSTailwind
+# Vue 3 + TypeScript + Tailwind + Vite
