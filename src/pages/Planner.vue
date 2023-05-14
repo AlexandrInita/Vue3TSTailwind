@@ -7,7 +7,7 @@
     <div class="mt-6 py-6 max-w-md mx-auto bg-white rounded-xl shadow-sm flex flex-col items-center space-y-4">
       <div class="min-w-full flex justify-end">
         <button 
-          class="py-2 px-4 mr-4 rounded-full text-center font-bold text-white bg-indigo-500 hover:bg-indigo-600"
+          class="py-2 px-4 mr-4 rounded-lg text-center font-bold text-white bg-indigo-500 hover:bg-indigo-600"
           @click="openTaskDialog"
         >
           <div class="flex">
@@ -21,25 +21,28 @@
       </div>
 
       <div class="mt-6 min-w-full">
-        <div 
-          v-for="(task,index) in tasks" :key="index"
+        <transition-group name="flip-list" tag="ul">
+          <li
+            v-for="task in tasks" :key="task.id"
             class="px-4 flex justify-between items-center cursor-pointer
-            hover:bg-sky-50"
+                  hover:bg-sky-50"
             @click.self="editTask(task)"
           >
-          <div 
-            class="text-2xl"
-            @click.stop="editTask(task)"
-          >
-            <span>{{task.id}}</span>
-            <span class="ml-3">{{task.name}}</span>
-          </div>
-          <input 
-            class="h-5 w-5"
-            type="checkbox"
-            v-model="task.completed"
-            @change="sort" />
-        </div>
+            <div 
+              class="text-2xl"
+              @click.stop="editTask(task)"
+            >
+              <span>{{task.id}}</span>
+              <span class="ml-3">{{task.name}}</span>
+            </div>
+            <input 
+              class="h-6 w-6"
+              type="checkbox"
+              v-model="task.completed"
+              @change="sort" 
+            />
+          </li>
+        </transition-group>
       </div>
     </div>
 
@@ -107,4 +110,7 @@ export default defineComponent ({
 </script>
 
 <style scoped>
+.flip-list-move {
+  transition: transform 0.5s ease;
+}
 </style>

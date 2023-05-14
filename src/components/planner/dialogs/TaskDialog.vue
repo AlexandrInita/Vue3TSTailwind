@@ -14,7 +14,7 @@
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <strong>Добавление новой задачи</strong>
+          <strong>{{ task.id ? 'Редактирование задачи' : 'Добавление новой задачи' }}</strong>
 
           <div class="my-5">
             <div>
@@ -44,14 +44,14 @@
 
           <div class="flex justify-end">
             <button 
-              class="py-2 px-4 rounded-full text-center font-bold text-white bg-gray-400 hover:bg-gray-500"
+              class="py-2 px-4 rounded-lg text-center font-bold text-white bg-gray-400 hover:bg-gray-500"
               @click="close"
             >
               Закрыть
             </button>
 
             <button 
-              class="ml-1 py-2 px-4 rounded-full text-center font-bold text-white bg-indigo-500 hover:bg-indigo-600"
+              class="ml-1 py-2 px-4 rounded-lg text-center font-bold text-white bg-indigo-500 hover:bg-indigo-600"
               @click="save"
             >
               Сохранить
