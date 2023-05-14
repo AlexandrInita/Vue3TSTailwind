@@ -16,7 +16,7 @@
             </svg>
 
             <span class="ml-2">Добавить</span>
-        </div>
+          </div>
         </button>
       </div>
 

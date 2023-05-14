@@ -13,6 +13,11 @@
         class="py-2 px-6 bg-blue-400 text-white font-semibold rounded-r-full rounded-l-sm" 
         to="/planner"
       >Планировщик</router-link>
+      <br>
+      <router-link 
+        class="py-2 px-6 bg-indigo-400 text-white font-semibold rounded-r-full rounded-l-sm" 
+        to="/simplePage"
+      >Просто страница</router-link>
     </div>
   </div>
 </template>

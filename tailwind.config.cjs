@@ -5,7 +5,14 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionTimingFunction: {
+        DEFAULT: 'ease-in-out'
+      },
+      transitionDuration: {
+        DEFAULT: '300ms'
+      }
+    },
   },
   plugins: [],
 }

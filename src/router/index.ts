@@ -1,17 +1,23 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../pages/Home.vue'
+import MainPage from '../pages/MainPage.vue'
 import Planner from '../pages/Planner.vue'
+import SimplePage from '../pages/SimplePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'MainPage',
+    component: MainPage
   },
   {
     path: '/planner',
     name: 'Planner',
     component: Planner
+  },
+  {
+    path: '/simplePage',
+    name: 'SimplePage',
+    component: SimplePage
   }
 ]
 
