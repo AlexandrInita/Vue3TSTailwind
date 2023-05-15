@@ -11,6 +11,9 @@ module.exports = {
       },
       transitionDuration: {
         DEFAULT: '300ms'
+      },
+      fontFamily: {
+        main: ['Manrope']
       }
     },
   },
