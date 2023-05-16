@@ -11,3 +11,11 @@ body {
 .header-link {
     @apply inline-block py-3 px-2 border-b-2 border-transparent hover:text-purple-500 hover:border-purple-500;
 }
+
+.mobile-header-link {
+    @apply block rounded-lg px-3 py-2 text-base font-medium hover:bg-indigo-500 hover:text-white;
+}
+
+.active-mobile-header-link {
+    @apply bg-indigo-500 text-white
+}
