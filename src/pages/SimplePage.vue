@@ -6,18 +6,18 @@
     
     <div class="mt-4 flex flex-col max-w-sm mx-auto">
       <div class="parent">
-        <h1 class="heading">Вход</h1>
+        <h1 class="heading">Авторизация</h1>
         <input 
           class="input"
-          placeholder="Email"
+          placeholder="Почта"
           v-model="email"
         />
         <input 
           class="input"
-          placeholder="Password"
+          placeholder="Пароль"
           v-model="password"
         />
-        <button class="btn">Login</button>          
+        <button class="btn">Вход</button>          
       </div>
     </div>
   </div>
