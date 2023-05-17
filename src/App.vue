@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-xl mx-auto font-main">
+  <div class="max-w-screen-xl h-screen mx-auto font-main">
     <the-header />
     
     <router-view/>

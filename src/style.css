@@ -9,7 +9,7 @@ body {
 }
 
 .header-link {
-    @apply inline-block py-3 px-2 border-b-2 border-transparent hover:text-purple-500 hover:border-purple-500;
+    @apply inline-block py-3 px-2 border-b-2 border-transparent hover:text-indigo-500 hover:border-indigo-500;
 }
 
 .mobile-header-link {

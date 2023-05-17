@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="px-2 border-b flex items-center justify-between">
-      <router-link class="py-3 font-bold text-purple-500" to="/">Vue3TsTailwind</router-link>
+      <router-link class="py-3 font-bold text-indigo-500" to="/">Vue3TsTailwind</router-link>
       
       <div class="hidden md:flex">
         <router-link class="header-link" to="/">Главная страница</router-link>
