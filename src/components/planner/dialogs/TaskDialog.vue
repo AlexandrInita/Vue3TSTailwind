@@ -65,7 +65,7 @@
 
 <script lang="ts">
 import { ref, defineComponent, watch, reactive, PropType } from 'vue';
-import Task from '../../../types/Task';
+import ITask from '../../../interface/ITask';
 const props = {
   show: {
     type: Boolean,
@@ -73,7 +73,7 @@ const props = {
   },
 
   taskProp: {
-    type: Object as PropType<Task | null>
+    type: Object as PropType<ITask | null>
   }
 };
 
@@ -85,7 +85,7 @@ export default defineComponent ({
 
 setup(props, { emit }) {
   const showModal = ref(false);
-  const task = reactive<Task>({id:0, name: '', text:'', completed: false})
+  const task = reactive<ITask>({id:0, name: '', text:'', completed: false})
   
   function close(): void {
     emit('close')

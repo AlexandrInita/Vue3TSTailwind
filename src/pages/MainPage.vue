@@ -26,6 +26,15 @@
           </router-link>
         </div>
       </div>
+
+      <div class="mt-2 flex justify-center">
+        <div class="p-6 basis-1/2 bg-white rounded-xl shadow-lg hover:shadow-xl flex flex-col items-center">
+          <div>Канбан</div>
+          <router-link class="mt-2 py-2 px-6 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg" to="/canbanPage">
+            Посмотреть
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>

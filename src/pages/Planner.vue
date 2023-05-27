@@ -58,13 +58,13 @@
 <script lang="ts">
 import { ref, defineComponent, reactive } from "vue"
 import TaskDialog from "../components/planner/dialogs/TaskDialog.vue"
-import Task from '../types/Task'
+import ITask from '../interface/ITask'
 import { taskDialogHook } from "../hooks/taskDialogHook"
 export default defineComponent ({
   components: { TaskDialog },
   setup () {
 
-    let tasks = reactive<Task[]>([
+    let tasks = reactive<ITask[]>([
       {id:1, name: 'TypeScript', text:'Изучить TypeScripte', completed: false},
       {id:2, name: 'Vue 3', text:'Изучить Vue 3', completed: false},
       {id:3, name: 'Tailwind', text:'Изучить Tailwind', completed: false}
@@ -72,14 +72,14 @@ export default defineComponent ({
 
     const { addEditTaskDialog, openTaskDialog, closeTaskDialog } = taskDialogHook();
 
-    const selectedTask = ref(null as Task | null)
+    const selectedTask = ref(null as ITask | null)
 
-    function editTask(task: Task): void {
+    function editTask(task: ITask): void {
       selectedTask.value = Object.assign({}, task)
       openTaskDialog()
     }
 
-    function saveTask(task: Task): void {
+    function saveTask(task: ITask): void {
       if (task.id) {
         const index = tasks.findIndex(el => el.id === task.id)
         tasks[index] = Object.assign({},task)
