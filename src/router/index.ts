@@ -3,6 +3,7 @@ import MainPage from '../pages/MainPage.vue'
 import Planner from '../pages/Planner.vue'
 import SimplePage from '../pages/SimplePage.vue'
 import CanbanPage from '../pages/CanbanPage.vue'
+import MindMapPage from '../pages/MindMapPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/canbanPage',
     name: 'CanbanPage',
     component: CanbanPage
+  },
+  {
+    path: '/mindMapPage',
+    name: 'MindMapPage',
+    component: MindMapPage
   }
 ]
 
