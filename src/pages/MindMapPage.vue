@@ -28,8 +28,10 @@ export default defineComponent ({
     const moveAt = function(e: any) {
       // dragItem.style.left = e.pageX - boxX - dragItem.offsetWidth / 2  + 'px'
       // dragItem.style.top = e.pageY - boxY - dragItem.offsetHeight / 2 + 'px'
-      dragItem.style.left = e.pageX - dragItem.offsetWidth / 2 + 'px'
-      dragItem.style.top = e.pageY - dragItem.offsetHeight / 2 + 'px'
+      if (dragItem) {
+        dragItem.style.left = e.pageX - dragItem.offsetWidth / 2 + 'px'
+        dragItem.style.top = e.pageY - dragItem.offsetHeight / 2 + 'px'
+      }
     }
 
     const onMouseDown = function(e: any) { 
@@ -44,7 +46,7 @@ export default defineComponent ({
 
       document.onmouseup = function() {
         document.onmousemove = null
-        dragItem.onmouseup = null
+        document.onmouseup = null
         setTimeout(() => dragItem = null, 100)
       },
 
